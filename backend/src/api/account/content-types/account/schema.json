@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "Account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "accounts"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "basic",
+        "premium",
+        "gold"
+      ]
+    },
+    "is_open": {
+      "type": "boolean"
+    },
+    "number": {
+      "type": "integer",
+      "unique": true,
+      "required": true,
+      "max": 999999999,
+      "min": 100000000
+    },
+    "current_balance": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "sortcode": {
+      "type": "integer",
+      "required": true,
+      "max": 99999
+    },
+    "card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::card.card",
+      "inversedBy": "associated_account"
+    }
+  }
+}
