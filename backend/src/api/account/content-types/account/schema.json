@@ -20,11 +20,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "basic",
-        "premium",
-        "gold"
-      ]
+      "enum": ["basic", "premium", "gold"]
     },
     "is_open": {
       "type": "boolean"

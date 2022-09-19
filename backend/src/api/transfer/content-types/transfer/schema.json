@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transfers",
+  "info": {
+    "singularName": "transfer",
+    "pluralName": "transfers",
+    "displayName": "Transfer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payee_name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "minLength": 2
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "memo": {
+      "type": "string",
+      "required": true,
+      "default": "(no memo entered)",
+      "maxLength": 60,
+      "minLength": 2
+    },
+    "payee_addr": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "minLength": 8
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "failed",
+        "pending",
+        "complete"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "normal",
+        "instant"
+      ]
+    },
+    "payee_account_number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "send",
+        "receive"
+      ]
+    },
+    "prev_balance": {
+      "type": "decimal",
+      "required": true
+    },
+    "new_balance": {
+      "type": "decimal",
+      "required": true
+    },
+    "sender": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "transfer"
+    }
+  }
+}
