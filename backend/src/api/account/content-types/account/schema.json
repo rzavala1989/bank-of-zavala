@@ -20,7 +20,11 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": ["basic", "premium", "gold"]
+      "enum": [
+        "basic",
+        "premium",
+        "gold"
+      ]
     },
     "is_open": {
       "type": "boolean"
@@ -47,6 +51,12 @@
       "relation": "oneToOne",
       "target": "api::card.card",
       "inversedBy": "associated_account"
+    },
+    "transfers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transfer.transfer",
+      "mappedBy": "source_account"
     }
   }
 }
