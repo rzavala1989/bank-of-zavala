@@ -10,11 +10,8 @@ module.exports = Joi.object({
   payee_name: Joi.string().regex(nameRegex).min(2).max(50).trim().required(),
   amount: Joi.number().precision(2).positive().required(),
   memo: Joi.string().min(2).max(60).trim().required(),
-  source_account: Joi.number()
-    .regex(/^[0-9]+$/)
-    .max(30)
-    .required(),
-  payee_account_number: Joi.number()
+  source_account: Joi.number().integer().positive().max(30).required(),
+  payee_account_number: Joi.string()
     .regex(/^[0-9]+$/)
     .max(30)
     .required(),
