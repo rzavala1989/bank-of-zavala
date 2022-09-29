@@ -1,0 +1,34 @@
+@import 'variables';
+
+// Widget module
+
+.module {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: $dark-blue-box-shadow;
+  padding: 1.5rem 0;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  & * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .module {
+    padding: 2rem 0;
+    & * {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}

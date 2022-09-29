@@ -1,0 +1,20 @@
+// @import 'all_utilities';
+.home-features {
+  display: flex;
+  justify-content: space-between;
+
+  & .home-image,
+  .home-text {
+    flex: 1;
+  }
+}
+.home-text {
+  text-align: center;
+}
+
+.home-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+//breakpoint TODO: fix this

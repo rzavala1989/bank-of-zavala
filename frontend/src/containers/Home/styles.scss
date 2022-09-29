@@ -1,0 +1,11 @@
+@import 'all_utilities';
+
+.home {
+  max-width: 32rem;
+}
+
+@include media-breakpoint-up(md) {
+  .home {
+    max-width: 56rem;
+  }
+}

@@ -1,0 +1,22 @@
+//Objective: This file contains all the variables used in the project, particularly for themes
+
+// Theme colors
+$primary: #3c6cde;
+
+//secondary colors
+$light-blue: #7c9eee;
+$dark-blue: #2a4bb6;
+$dark-blue-box-shadow: rgba(130, 100, 240, 0.15);
+
+// page
+$body-bg: #f5f5f5;
+$body-color: $light-blue;
+$input-color: $light-blue;
+$input-placeholder-color: $light-blue;
+
+$color-danger: #d9534f;
+
+// fonts
+$font-family-sans-serif: Monserrat, 'Open Sans', Roboto, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+$headings-font-weight: 700;
