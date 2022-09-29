@@ -5,7 +5,7 @@ export const HomeFeatures = () => {
     <section className='home-features'>
       <div className='home-image'>
         <img
-          src='https://placehold.it/400x300'
+          src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnuWlQ-ymLhmNHLzrTQHwxSaHcEISZ2B0N8f2vzWIRpg&s'
           className='img-responsive'
           alt='placeholder'
         />

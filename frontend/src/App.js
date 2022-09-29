@@ -4,12 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 
 //from config
 import { updateApiConfig } from './api/base';
-import { Home } from './components/Home';
-import { Login } from './components/Login';
-import { Register } from './components/Register';
-import { Dashboard } from './components/Dashboard';
-import { Logout } from './components/Logout';
-import { PageNotFound } from './components/PageNotFound';
+import { Home } from './containers/Home/Home';
+import { Login } from './containers/Login/Login';
+import { Register } from './containers/Register/Register';
+import { Dashboard } from './containers/Dashboard/Dashboard';
+import { Logout } from './containers/Logout/Logout';
+import { PageNotFound } from './containers//PageNotFound/PageNotFound';
 
 function App() {
   return (

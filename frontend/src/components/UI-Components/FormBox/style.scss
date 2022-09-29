@@ -1,0 +1,66 @@
+.module {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: rgba(130, 100, 240, 0.15);
+  padding: 1.5rem 0;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  & * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.form-module {
+  max-width: 23rem;
+  padding-bottom: 0%;
+  // @.module {
+  //   //TODO
+  // }
+}
+
+.login-icon {
+  text-align: center;
+}
+
+.icon-container {
+  background: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  margin: 2rem 0 3.5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 4rem navy;
+}
+
+//form
+.form-module form {
+  margin: 0 auto;
+  > div:first-child {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+//inputs
+.login-input,
+.password-input,
+.form-control {
+  padding-left: 2rem;
+  background-position: 1rem;
+  background-repeat: no-repeat;
+}
+
+.checkbox {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

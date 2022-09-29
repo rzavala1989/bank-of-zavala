@@ -1,11 +1,35 @@
-@import 'all_utilities';
+// @import 'all_utilities';
 
 .home {
-  max-width: 32rem;
+  max-width: 56rem;
 }
 
-@include media-breakpoint-up(md) {
-  .home {
-    max-width: 56rem;
+// Widget module
+
+.module {
+  background: #fff;
+
+  border-radius: 0.5rem;
+  box-shadow: rgba(130, 100, 240, 0.15);
+  padding: 1.5rem 0;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  & * {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
+
+// @include media-breakpoint-up(md) {
+//   .home {
+//     max-width: 56rem;
+//   }
+// }
