@@ -1,10 +1,8 @@
 import React from 'react';
-import { Form, Field, withFormik, FormikProps } from 'formik';
+import { Form, Field, withFormik } from 'formik';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import SingleModuleButton from 'components/UI/Buttons/SingleModuleButton';
-
-import * as H from 'history';
 
 // Shape of form values
 

@@ -22,13 +22,3 @@
     }
   }
 }
-
-@include media-breakpoint-up(md) {
-  .module {
-    padding: 2rem 0;
-    & * {
-      margin-left: 2rem;
-      margin-right: 2rem;
-    }
-  }
-}
