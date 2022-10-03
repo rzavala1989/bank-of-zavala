@@ -1,8 +1,9 @@
 //TODO bring this full circle
 
-@import 'all_utilities';
+@import '_all_utilities';
+@import 'variables';
 
 //Validations/errors
 .field-invalid {
-  color: $alt-danger;
+  color: $color-danger;
 }

@@ -60,6 +60,14 @@
   background-repeat: no-repeat;
 }
 
+.login-input {
+  background-image: url('./human-icon.svg');
+}
+
+.password-input {
+  background-image: url('./lock-icon.svg');
+}
+
 .checkbox {
   margin-top: 1rem;
   margin-bottom: 1rem;

@@ -1,0 +1,23 @@
+@import 'scss/vendor.scss';
+@import 'scss/site.scss';
+@import 'scss/_all_utilities.scss';
+
+.App {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+//Panel Content
+.panel-content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+//Custom Button for our website
