@@ -1,0 +1,78 @@
+@import '../scss/_all_utilities.scss';
+
+// Main navigation
+
+.main-nav {
+  height: 0;
+  visibility: hidden;
+
+  ul {
+    @include reset-ul();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin-bottom: 0.875rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .active {
+    .main-nav-widget,
+    .main-nav-box {
+      span {
+        color: #fff;
+      }
+    }
+
+    .main-nav-widget {
+      background-image: linear-gradient(
+        to right,
+        $light-blue 0%,
+        $dark-blue 100%
+      );
+    }
+
+    .main-nav-box {
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.navigation-visible {
+  height: 100%;
+  visibility: visible;
+  margin-top: 1.875rem;
+}
+
+.main-nav-widget {
+  text-align: center;
+  background: #f6f8f9;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.625rem;
+
+  span {
+    text-transform: uppercase;
+    color: #434d56;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+}
+
+.main-nav-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    color: #9fadb9;
+    font-size: 1.875rem;
+  }
+}
