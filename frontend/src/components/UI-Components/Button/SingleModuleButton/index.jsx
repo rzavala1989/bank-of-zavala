@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../style.scss';
 import './style.scss';
 
-const SingleModuleButton = ({ href, btnType, text }) => {
+export const SingleModuleButton = ({ href, btnType, text }) => {
   return (
     <div className='single-module-btn'>
       {href ? (
@@ -19,5 +19,3 @@ const SingleModuleButton = ({ href, btnType, text }) => {
     </div>
   );
 };
-
-export default SingleModuleButton;

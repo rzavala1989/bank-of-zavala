@@ -9,8 +9,19 @@ const InnerForm = (props) => {
   const { errors, touched } = props;
 
   return (
-    <Form className='login-form'>
+    <Form className='register-form'>
       <div>
+        <div className='form-group'>
+          <Field
+            type='text'
+            className='form-control login-input'
+            name='name'
+            placeholder='Name'
+          />
+          {touched.name && errors.name && (
+            <p className='field-invalid'>{errors.name}</p>
+          )}
+        </div>
         <div className='form-group'>
           <Field
             type='email'
@@ -35,30 +46,24 @@ const InnerForm = (props) => {
           )}
         </div>
 
-        <div className='checkbox'>
-          <label>
-            <Field type='checkbox' name='remember' />
-            Keep me signed in
-          </label>
-        </div>
-
         <p>
-          <Link to='/register'>Don't have an account?</Link>
+          <Link to='/login'>Already have an account?</Link>
         </p>
       </div>
 
-      <SingleModuleButton text='Log in now' type='submit' />
+      <SingleModuleButton text='Create your account' type='submit' />
     </Form>
   );
 };
 
 // Wrap our form with the using withFormik HoC
-export const LoginForm = withFormik({
+export const RegisterForm = withFormik({
   // Transform outer props into form values
   mapPropsToValues: () => ({ identifier: '', password: '' }),
 
   // Add a custom validation function (this can be async too!)
   validationSchema: Yup.object().shape({
+    name: Yup.string().required('Name is required'),
     identifier: Yup.string()
       .required('Email is required')
       .email('This is not a valid email'),
